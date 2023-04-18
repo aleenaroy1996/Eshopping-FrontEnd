@@ -29,13 +29,13 @@ export const Login = () =>{
         
 
         // GET REQUEST FOR REST API - working
-        axios.post('http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/authenticate', user).then(res =>
+        axios.post('/eshopping/admin/api/v1.0/shopping/authenticate', user).then(res =>
             {
                 if(res.status ===200 ){
                     sessionStorage.setItem("username", userName);
                     console.log("navigation")
                     localStorage.setItem("isLoggedIn","Yes");
-                        axios.get(`/admin/api/v1.0/shopping/role/${userName}`).then(res =>
+                        axios.get(`/eshopping/admin/api/v1.0/shopping/role/${userName}`).then(res =>
                             {
                                 
                                 console.log(res.status);

@@ -27,7 +27,7 @@ export const Addproduct = () =>{
             quantityAvailable: quantityAvailable, 
         }
         
-        axios.post(`http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/${name}/add`,product,{
+        axios.post(`/eshopping/admin/api/v1.0/shopping/${name}/add`,product,{
             headers:{
                 Authorization: `Bearer ${token}`
             }
