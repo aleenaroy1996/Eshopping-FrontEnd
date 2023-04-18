@@ -35,7 +35,7 @@ export const Register = () =>{
             contactNumber: contactNumber    
         }
 
-        axios.post('/eshopping/admin/api/v1.0/shopping/register',user)
+        axios.post('http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/register',user)
         .then(res =>
           {
               if(res.status ===201 || res.status ===200 ){

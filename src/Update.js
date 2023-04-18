@@ -49,7 +49,7 @@ export const Update = () =>{
             quantityAvailable: quantityAvailable, 
         }
 
-        axios.put(`/eshopping/admin/api/v1.0/shopping/${name}/update/${location.state.itm.id}`,product,{
+        axios.put(`http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/${name}/update/${location.state.itm.id}`,product,{
             headers:{
                 Authorization: `Bearer ${token}`
             }
