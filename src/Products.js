@@ -141,7 +141,7 @@ export const Products = ()=>{
             <div className="Product-display">
             <Card className="shadow p-3 m-2 bg-body-tertiary rounded" style={{ width: '18rem' }}>
               <Card.Img className="p-2" variant="top" style={{ height: '12rem' }}
-               src={require(`C:/Users/2196078/OneDrive - Cognizant/Pictures/${item.name}.png`)} />
+               src={require(`/${item.name}.png`)} />
               <Card.Body >
                 <Card.Title className="text-dark">{item.name}</Card.Title>
                 <Card.Text className="text-dark">{item.description}</Card.Text>
