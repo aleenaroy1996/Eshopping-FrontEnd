@@ -29,7 +29,7 @@ export const Login = () =>{
         
 
         // GET REQUEST FOR REST API - working
-        axios.post('/admin/api/v1.0/shopping/authenticate', user).then(res =>
+        axios.post('http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/authenticate', user).then(res =>
             {
                 if(res.status ===200 ){
                     sessionStorage.setItem("username", userName);

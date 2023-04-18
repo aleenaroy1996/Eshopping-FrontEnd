@@ -45,6 +45,5 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.9.0"
-  },
-  "proxy" : "http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080"
+  }
 }

@@ -17,7 +17,7 @@ export const Products = ()=>{
     const [items,setItems] = useState([]);
 
     useEffect(() => {
-      axios.get(`/customer/api/v1.0/shopping/all`).then(res=>setItems(res.data.productEntityList));
+      axios.get(`http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/customer/api/v1.0/shopping/all`).then(res=>setItems(res.data.productEntityList));
       console.log("useeffect")
       },[]);
 
@@ -44,7 +44,7 @@ export const Products = ()=>{
         e.preventDefault();
         // console.log(userName);
         
-        axios.get(`/customer/api/v1.0/shopping/products/search/${searchItem}`)
+        axios.get(`http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/customer/api/v1.0/shopping/products/search/${searchItem}`)
         .then(res =>
           {
             console.log(res.data)
@@ -74,7 +74,7 @@ export const Products = ()=>{
       }else{
         const token = sessionStorage.getItem("token");
         console.log(`Bearer ${token}`);
-        axios.delete(`/admin/api/v1.0/shopping/${name}/delete/${id}`,{
+        axios.delete(`http://ec2-3-139-217-115.us-east-2.compute.amazonaws.com:8080/admin/api/v1.0/shopping/${name}/delete/${id}`,{
           headers:{
               Authorization: `Bearer ${token}`
           }
